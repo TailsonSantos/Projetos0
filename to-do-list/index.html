@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  media query  -->
+        <link rel="stylesheet" href="style.css">
+    <!------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>TO-DO-LIST</title>
+</head>
+<body>
+    <main>
+        <div id="title">
+            <h1>Lista de Tarefas</h1>
+        </div>
+
+        <!--ADD-TASK-->
+        <section id="add-task-container">
+            <div id="task-header">
+                <form action="#">
+                    <label id="tarefa" for="task-title">TAREFA:</label>
+                    <input type="text" name="tasktitle" id="task-title" placeholder="Digite Sua Tarefa">
+                    <button type="submit" id="add">+</button>
+                </form>              
+            </div>
+        </section>
+
+        <!--TITLE2-->
+        <div id="container-title2" class="hide-title2">
+            <span id="title2">Suas Tarefas:</span>
+        </div>
+
+        <!--TASK LISTE-->
+        <div id="task-list-container">
+                        <ol id="task-container" >
+                            <li  id="task" class="template hide done">                              
+                                    <div id="task-title-container">
+                                            <span id="task-dinamic-title"> <!--TASK DINAMICA--></span>
+                                            <!--ICONES-->
+                                            <div id="icons-container">
+                                                <span class="material-symbols-outlined icon done-btn">
+                                                    done
+                                                </span>
+                                                <span class="material-symbols-outlined icon delete-btn">
+                                                    delete
+                                                </span>
+                                                <span class="material-symbols-outlined icon edit-btn">
+                                                    edit
+                                                </span>
+                                            </div>
+                                    </div>
+                                    <!--Edite-->
+                                    <div class="edit-container hide-edit">
+                                        <form action="#">
+                                            <!--NEW-TITLE-->
+                                            <div id="title-edit-container">
+                                                <label for="newtask">TitleEdit:</label>
+                                                <input type="text" name="newtask" id="newtask" required>
+                                            </div>
+                                    
+                                            <!--FONTE-->
+                                           
+                                                <div id="fonte-edit-container">
+                                                    <label for="edit-font-family">Fonte:</label>
+                                                    <select id="edit-font-family">
+                                                       
+                                                        <!--Fonte Dinamica-->
+                                                    </select>
+                                                </div>
+                                            <div id="colors-edit-container">
+                                                <!--COLOR-->                                   
+                                                <div id="color-edit-container">
+                                                    <label for="title-color">TitleColor:</label>
+                                                    <input type="color" name="newtask" id="title-color">                                          
+                                                </div>
+                                            </div>
+
+                                                <div id="edit-btn-confirm-container">
+                                                    <button id="edit-btn-confirm">ALTERAR</button>
+                                                </div>
+                                            
+                                        </form> 
+                                 </div>                            
+                            </li>
+                        </ol>        
+            </div>
+
+    </main> 
+    <script src="js-scripts/script.js"></script>  
+</body>
+</html>
