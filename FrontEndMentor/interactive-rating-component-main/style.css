@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 
@@ -17,60 +18,91 @@
 }
 
 body{
-    
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--Very-Dark-Blue);
 }
+
+
 .container{
-    display: flex;
+    font-size: 1.50rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    min-width: 90%;
+    min-height: 50%;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    background: var(--Dark-Blue);
+    
+    
     
 }
 
-.content{
+.content{  
+    width: 100%;
+    height: 100%;
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-    gap: 0.50rem;
-    
-    background: linear-gradient(to top,var(--Medium-Grey),var(--Dark-Blue)0%);
-    padding: 1rem;
-    border-radius: 15px;
-}
-
-.container-img{
-    padding: 8px;
-    background-color:rgba(90, 86, 86, 0.445);
-    
-}
-img{
-    display: inline;
-    width: 25px;
-}
-
-.title{
-   margin: 8px 0;;
-}
-.nums-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     
 
+    
+    
 }
+
+.num{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    padding: 0.50rem;
+    
+}
+
 .boll{
-    margin: 3px;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.281);
     border-radius: 50%;
-    background-color:rgba(90, 86, 86, 0.445);
+    padding: 0.5rem;
+    width: 65px;
+    height: 65px;
     transition: 0.5s;
-    
 }
 
-.boll:hover{
-    background-color: hsl(25, 97%, 53%);
+
+.boll:active{
+    background-color: var(--Light-Grey);
 }
 
+#nums-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+nums{
+    color: black;
+}
+
+
+.btn{
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    background-color: var(--Orange);
+    transition: 0.5s;
+}
+
+
+.btn:hover{
+    background-color: white;
+    color: var(--Orange);
+    cursor: pointer;
+}
